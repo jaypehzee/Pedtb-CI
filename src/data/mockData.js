@@ -75,6 +75,44 @@ export const mockDataTeam = [
   },
 ];
 
+export const mockDataCases = [
+  {
+    id: 1,
+    status: "Ongoing",
+    startDate: new Date(2023, 2, 15),
+    endDate: new Date(2023, 8, 30),
+    caseStatus: "Open",
+  },
+  {
+    id: 2,
+    status: "Pending",
+    startDate: new Date(2023, 1, 10),
+    endDate: new Date(2023, 6, 20),
+    caseStatus: "Pending",
+  },
+  {
+    id: 3,
+    status: "Complete",
+    startDate: new Date(2023, 4, 5),
+    endDate: new Date(2023, 11, 10),
+    caseStatus: "Close",
+  },
+  {
+    id: 4,
+    status: "Ongoing",
+    startDate: new Date(2023, 2, 1),
+    endDate: new Date(2023, 7, 15),
+    caseStatus: "Open",
+  },
+  {
+    id: 5,
+    status: "Complete",
+    startDate: new Date(2023, 1, 20),
+    endDate: new Date(2023, 10, 5),
+    caseStatus: "Close",
+  },
+];
+
 export const mockDataContacts = [
   {
     id: 1,

@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../theme";
@@ -6,10 +7,12 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const Patient_Info = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -17,6 +20,16 @@ const Patient_Info = () => {
       headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
+      renderCell: (params) => (
+        <div style={{ cursor: "pointer" }}>
+          <Link
+            to={`/patient_info/${params.row.id}`}
+            style={{ color: "white" }}
+          >
+            {params.row.name}
+          </Link>
+        </div>
+      ),
     },
     {
       field: "age",
